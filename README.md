@@ -1,0 +1,1 @@
+# cn-automation-ping-monitor
