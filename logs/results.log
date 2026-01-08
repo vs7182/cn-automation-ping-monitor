@@ -1,0 +1,54 @@
+2026-01-07 21:21:07 - 8.8.8.8 is UP - Response Time: 147.90 ms
+2026-01-07 21:21:07 - 1.1.1.1 is UP - Response Time: 48.87 ms
+2026-01-07 21:21:07 - google.com is UP - Response Time: 119.02 ms
+2026-01-07 21:23:55 - 8.8.8.8 is UP - Response Time: 97.29 ms
+2026-01-07 21:23:55 - 1.1.1.1 is UP - Response Time: 27.81 ms
+2026-01-07 21:23:56 - google.com is UP - Response Time: 45.39 ms
+2026-01-08 19:30:14 - 8.8.8.8 is UP - Response Time: 147.29 ms
+
+-------------------------summary-------------------------
+
+Total Hosts Checked: 7
+Hosts UP: 1
+Hosts DOWN: 0
+2026-01-08 19:30:14 - 1.1.1.1 is UP - Response Time: 16.12 ms
+
+-------------------------summary-------------------------
+
+Total Hosts Checked: 7
+Hosts UP: 1
+Hosts DOWN: 0
+2026-01-08 19:30:14 - google.com is UP - Response Time: 27.84 ms
+
+-------------------------summary-------------------------
+
+Total Hosts Checked: 10
+Hosts UP: 1
+Hosts DOWN: 0
+2026-01-08 19:34:55 - 8.8.8.8 is UP - Response Time: 73.63 ms
+2026-01-08 19:34:55 - 1.1.1.1 is UP - Response Time: 18.02 ms
+2026-01-08 19:34:55 - google.com is UP - Response Time: 29.76 ms
+
+-------------------- SUMMARY --------------------
+Total Hosts Checked: 3
+Hosts UP: 0
+Hosts DOWN: 0
+-------------------------------------------------
+2026-01-08 19:39:49 - 8.8.8.8 is UP - Response Time: 102.12 ms
+2026-01-08 19:39:49 - 1.1.1.1 is UP - Response Time: 42.40 ms
+2026-01-08 19:39:49 - google.com is UP - Response Time: 50.29 ms
+
+-------------------- SUMMARY --------------------
+Total Hosts Checked: 3
+Hosts UP: 3
+Hosts DOWN: 0
+-------------------------------------------------
+2026-01-08 19:41:00 - 8.8.8.8 is UP - Response Time: 93.13 ms
+2026-01-08 19:41:00 - 1.1.1.1 is UP - Response Time: 17.93 ms
+2026-01-08 19:41:00 - google.com is UP - Response Time: 25.95 ms
+
+-------------------- SUMMARY --------------------
+Total Hosts Checked: 3
+Hosts UP: 3
+Hosts DOWN: 0
+-------------------------------------------------
