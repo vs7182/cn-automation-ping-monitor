@@ -1,6 +1,6 @@
 import subprocess
 import platform
-import os
+import os, csv
 import time, datetime
 
 
@@ -42,24 +42,36 @@ def log_result(host,status,response_time):
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     with open("logs/results.log", 'a') as file:
-        if response_time is not None:            
-            if(response_time > 50):
-                file.write(f"{timestamp} - {host} is {status} - Fast - Response Time: {response_time:.2f} ms \n")
-            elif((response_time > 50) and (response_time <= 150)):
-
-                file.write(f"{timestamp} - {host} is {status} - Moderate - Response Time: {response_time:.2f} ms \n")
-            elif(response_time > 150):
-                file.write(f"{timestamp} - {host} is {status} - Slow - Response Time: {response_time:.2f} ms \n")
-                
+        if response_time is not None:   
+              
+           if response_time < 50:
+               label = "FAST"
+           elif response_time <= 150:
+               label = "NORMAL"
+           else:
+               label = "SLOW"
+           file.write(f"{timestamp} - {host} is {status} - {label} - Response Time: {response_time:.2f} ms\n")
+           create_csv_file(timestamp, host, "UP" if status else "DOWN", response_time if status else "", performance=label)
         else:
             file.write(f"{timestamp} - {host} is {status} - Response Time: N/A\n")
-           
+            create_csv_file(timestamp, host, "UP" if status else "DOWN", response_time if status else "", performance="N/A")
         
 
 
             
         file.close()
         
+def create_csv_file(timestamp,host,status,response_time,performance):
+    os.makedirs('logs', exist_ok=True)
+    file_exists = os.path.isfile('logs/results.csv')
+    
+    with open('logs/results.csv', mode='a', newline='') as file:
+        writer = csv.writer(file)
+        
+        if not file_exists:
+            writer.writerow(['Timestamp', 'Host', 'Status', 'Response Time (ms)', 'Performance'])
+        
+        writer.writerow([timestamp, host, status, response_time if response_time is not None else 'N/A', performance if performance is not None else 'N/A'])
         
     
 

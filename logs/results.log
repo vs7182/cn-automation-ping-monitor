@@ -59,3 +59,12 @@ Total Hosts Checked: 3
 Hosts UP: 3
 Hosts DOWN: 0
 -------------------------------------------------
+2026-01-09 19:26:34 - 8.8.8.8 is UP - NORMAL - Response Time: 92.83 ms
+2026-01-09 19:26:34 - 1.1.1.1 is UP - FAST - Response Time: 24.92 ms
+2026-01-09 19:26:34 - google.com is UP - FAST - Response Time: 32.29 ms
+
+-------------------- SUMMARY --------------------
+Total Hosts Checked: 3
+Hosts UP: 3
+Hosts DOWN: 0
+-------------------------------------------------

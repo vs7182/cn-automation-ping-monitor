@@ -9,3 +9,4 @@ The project monitors the availability of multiple IP addresses provided in a hos
 The script also logs the results, including response time, and generates a summary report for better visibility.
 
 The tool is also classified how fast over ip response based on response time
+This tool also export the result as csv file for easy reporting and analysing
