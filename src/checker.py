@@ -43,8 +43,14 @@ def log_result(host,status,response_time):
     
     with open("logs/results.log", 'a') as file:
         if response_time is not None:            
-            file.write(f"{timestamp} - {host} is {status} - Response Time: {response_time:.2f} ms\n")
-           
+            if(response_time > 50):
+                file.write(f"{timestamp} - {host} is {status} - Fast - Response Time: {response_time:.2f} ms \n")
+            elif((response_time > 50) and (response_time <= 150)):
+
+                file.write(f"{timestamp} - {host} is {status} - Moderate - Response Time: {response_time:.2f} ms \n")
+            elif(response_time > 150):
+                file.write(f"{timestamp} - {host} is {status} - Slow - Response Time: {response_time:.2f} ms \n")
+                
         else:
             file.write(f"{timestamp} - {host} is {status} - Response Time: N/A\n")
            
@@ -74,6 +80,7 @@ if __name__ == "__main__":
             print(f"{host} is UP - Response Time: {status[1]:.2f} ms")
             log_result(host, "UP", status[1])
             up_count += 1
+            
      
         else:
             print(f"{host} is DOWN - Response Time: N/A")
